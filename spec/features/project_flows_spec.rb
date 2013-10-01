@@ -47,6 +47,10 @@ describe "Project Listing" do
       end
 
     it "should display the navigation" do
+
+      project1 = FactoryGirl.create(:project, :title => "Project 1")
+      project2 = FactoryGirl.create(:project, :title => "Project 2")
+      project3 = FactoryGirl.create(:project, :title => "Project 3")
       # Visit the root URL
       visit "/"
       # Expect the page we're on is root
