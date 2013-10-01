@@ -10,6 +10,9 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   # ## Mock Framework
+
+  
+  config.include SessionSupport
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
   #
@@ -36,4 +39,5 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
   config.include Capybara::DSL
+
 end
