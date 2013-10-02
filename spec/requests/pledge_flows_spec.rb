@@ -26,7 +26,7 @@ describe "Pledge Listing" do
       expect(current_path).to eq(new_project_pledge_path(@project))
       expect(Pledge.count).to eq(0) 
 
-      fill_in 'pledge[amount]', with: 100
+      fill_in 'pledge[amount]', with: 100.to_i
       click_button 'Pledge Now'
 
       # Should be Redirected back to project page with thank you message

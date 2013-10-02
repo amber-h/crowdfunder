@@ -1,0 +1,11 @@
+<%= form_for [@project, @pledge] do |f| %>
+
+  
+
+        <div class="field"> 
+           		<%= f.number_field :amount, {placeholder: 'amount'} %>
+        </div> 
+       
+        <div class="actions-bigger-btn"><%=submit_tag 'Pledge Now' %></div>
+       
+<% end %>

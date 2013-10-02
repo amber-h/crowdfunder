@@ -8,7 +8,9 @@ Crowdfunder::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-  resources :projects
+  resources :projects do
+    resources :pledges, :only => [:new, :create]
+  end
   resources :users, :except => :index
 
   resources :sessions, :except => [:show, :update, :destroy]
