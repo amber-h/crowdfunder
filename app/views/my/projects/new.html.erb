@@ -1,0 +1,17 @@
+<%= form_for [:my, @project] do |f| %>
+
+	<%= f.label "Title"%> 
+	<%= f.text_field :title, {placeholder: 'Title'} %>
+
+	<%= f.label "Teaser"%> 
+	<%= f.text_field :teaser, {placeholder: 'teaser'} %>
+
+	<%= f.label "Description"%> 
+	<%= f.text_field :description, {placeholder: 'description'} %>
+
+	<%= f.label "Goal"%> 
+	<%= f.number_field :goal, {placeholder: 'goal'} %>
+
+	<div class="actions"><%=submit_tag 'Publish Project' %></div>
+	
+<% end %>

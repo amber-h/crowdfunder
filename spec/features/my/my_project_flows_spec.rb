@@ -56,6 +56,7 @@ describe "Project Listing" do
       fill_in 'project[description]', with: "Test Project Description"
       fill_in 'project[goal]', with: "12000"
 
+
       click_button 'Publish Project'
 
       expect(current_path).to eq(my_projects_path)
