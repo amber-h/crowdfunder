@@ -3,6 +3,7 @@ class My::ProjectsController < ApplicationController
   before_filter :require_login
   before_filter :require_project, except: [:index, :new, :create]
 
+
   def index
     @projects = current_user.projects.order('projects.created_at DESC').all
   end
@@ -31,9 +32,16 @@ class My::ProjectsController < ApplicationController
     end
   end
 
+  def nav_state
+    @nav = :my_projects
+  end
+  
   protected
 
   def require_project
     @project = current_user.projects.find params[:id]
   end
+
+  
+
 end

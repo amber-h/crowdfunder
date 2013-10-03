@@ -11,4 +11,10 @@ class ProjectsController < ApplicationController
 	def edit
 
 	end
+
+
+	
+	def nav_state
+    	@nav = :projects
+  	end
 end
