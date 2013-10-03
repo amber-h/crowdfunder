@@ -71,6 +71,10 @@ describe "Project Listing" do
       click_link 'Project 1'
       page.should have_selector('.navbar ul li.active a', text: "Projects")
       expect(page).to have_selector('.navbar ul li.active a', text: "Projects")
+
+      page.should have_selector('.navbar ul li.active a', count: 1)
+      expect(page).to have_selector('.navbar ul li.active a', count: 1)
+      
     end 
 
   end
