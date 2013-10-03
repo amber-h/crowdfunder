@@ -49,6 +49,9 @@ describe "Pledge Listing" do
 
       last_email.to.should == [@project.user.email]
       expect(last_email.to).to eq([@project.user.email])
+
+      last_email.to.should == [@project.user.email]
+      expect(last_email.to).to eq([@project.user.email])
     end
   end
 end
