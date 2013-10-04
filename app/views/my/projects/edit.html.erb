@@ -13,4 +13,8 @@
 	<%= f.text_field :goal, {placeholder: 'goal'} %>
 
 	<div class="actions"><%=submit_tag 'Update Project' %></div>
+	
+
 <% end %>
+
+	<%= link_to 'Manage Images', my_project_images_path(@project) %>

@@ -1,6 +1,8 @@
 
 <% @projects.each do |project| %>
-	<li class= "project"><%= link_to project[:title], project %></li>
+	
+	<%= render 'project', :project => project %>
 <% end %>
 
 <%= paginate @projects %>
+

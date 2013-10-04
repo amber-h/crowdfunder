@@ -16,8 +16,12 @@ Crowdfunder::Application.routes.draw do
   resources :sessions, :except => [:show, :update, :destroy]
 
   namespace :my do 
-    resources :projects # => My::ProjectsController
+    resources :projects do
+      resources :images
+    end
   end
+
+ 
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
