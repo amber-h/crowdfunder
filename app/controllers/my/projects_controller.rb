@@ -32,10 +32,16 @@ class My::ProjectsController < ApplicationController
     end
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to my_projects_path, :notice => "deleted"
+  end
+
   def nav_state
     @nav = :my_projects
   end
-  
+
   protected
 
   def require_project
