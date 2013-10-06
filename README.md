@@ -1,9 +1,9 @@
 <snippet>
-  <content><![CDATA[
-# ${1:Crowdfunder}
+<content>
+# Crowdfunder
  
 This is a basic crowdfunding app written in a TDD fashion.
- 
+
 ## What was used to build this app 
 
   - Postgres is used in both the production and development environments of the app
@@ -14,7 +14,7 @@ This is a basic crowdfunding app written in a TDD fashion.
   - Kaminari gem is used to implement pagination
   - Carrierwave gem is used to upload files (in particular images for this application)
    
-TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
+
+</content>
+ 
 </snippet>
